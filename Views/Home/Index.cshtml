@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <div class="banner-left col-6">
+        <div class="banner-title">
+            <h1>Projeto Iniciativa <strong>Vida saudavel</strong></h1>
+            <div class="banner-title-text">
+                <p>"SOMOS RESPONSÁVEIS PELO QUE FAZEMOS, MAS TAMBÉM SOMOS RESPONSÁVEIS POR AQUILO QUE DEIXAMOS DE
+                    FAZER."
+
+                    É verdade que a ciência caminha a passos largos no desenvolvimento de soluções para aumentar a saúde
+                    e
+                    conseguir a cura para enfermidades que, pouco mais de algumas décadas atrás, soavam como ameaças
+                    quase
+                    invencíveis. Contudo, ainda não saiu das bancadas dos laboratórios farmacêuticos ou das
+                    universidades
+                    uma pílula capaz de prolongar a vida do ser humano com qualidade e prevenir a maior parte das
+                    doenças.
+                    Uma das formas mais efetivas de fazer ao menos uma parcela desse aparente milagre é mesmo a adoção
+                    de
+                    hábitos saudáveis ou, para quem está longe de andar na linha, a mudança do estilo de vida.</p>
+            </div>
+            <div class="formulario-left">
+                <div class="form-full">
+                    <strong class="title">Fique em contato</strong>
+                    <form class="form" asp-action="" method="POST">
+                        <input required placeholder="Digite seu nome" name="nome" />
+                        <input type="email" name="email" required placeholder="Digite seu email" />
+                        <input type="text" name="mensagem" placeholder="Mensagem(opcional)" />
+                        <button type="submit">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner-right col-6">
+        <div class="image-wapper">
+            <img src="" alt="">
+        </div>
+        <div class="social-media row">
+            <a href="https://www.linkedin.com/in/igor-wagner-66b22222a/" class="text-center">
+                <i class="fab fa-linkedin"></i>
+                <p >Agenda de eventos</p>
+            </a>
+            <a href="https://github.com/igor-devloper" class="text-center">
+                <i class="fab fa-github-alt"></i>
+                <p >Dicas de vida saudavel</p>
+            </a>
+            <a href="https://twitter.com/igorumgnomio" class="text-center">
+                <i class="fab fa-twitter"></i>
+                <p >Apoiadores</p>
+            </a>
+        </div>
+    </div>
+</div>
