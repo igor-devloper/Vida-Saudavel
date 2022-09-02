@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using projetohotsite.Models;
+
 
 namespace Hotsite.Models
 {

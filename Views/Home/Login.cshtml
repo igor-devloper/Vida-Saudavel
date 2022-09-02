@@ -1,4 +1,4 @@
-@using Microsoft.AspNetCore.Http
+
 @{
     ViewData["Title"] = "Login";
 }
@@ -6,6 +6,7 @@
     <div class="container">
       <div class="logo-wapper">
        <img src="../image/logo.png" alt="">
+  
       </div>
       <div class="text-header">
         <h1>
@@ -27,12 +28,14 @@
               required
               placeholder="Digite sua senha"
             />
+            <p>Não possui cadastro? <a href="/Usuario/Cadastro" target="_blank">Cadastre-se</a></p>
             <button
               className="mt-4 bg-orange-500 uppercase py-4 rounded font-bold text-sm hover:opacity-60 transition-opacity disabled:opacity-50"
               type="submit"
             >
               Entrar
             </button>
+            <p class="text-danger">@ViewData["Erro"]</p>
           </form>
         </div>
       </div >

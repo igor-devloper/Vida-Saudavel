@@ -40,14 +40,24 @@ namespace Biblioteca.Controllers
             }
             else
             {   
-                ViewData["Erro"] = "Senha inválida";
+                ViewData["Erro"] = "Senha e/ou email invalidos";
                 return View();
             }
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+
+        public IActionResult CadastrarInteresse(Interesse cad)
         {
-            return View();
+            try{
+                DatabaseService dbs = new DatabaseService();
+                dbs.CadastraInteresse(cad);
+                return View("Index");
+            }
+            catch(Exception){
+                _logger.LogError("ERRO AO ENVIAR CADASTRA DE INTERESSE");
+                return View("ERRO", cad);
+            }
         }
     }
 }

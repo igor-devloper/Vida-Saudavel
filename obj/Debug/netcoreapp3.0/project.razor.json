@@ -10190,11 +10190,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\igor2\\igor\\atividades do curso\\projetohotsite\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\igor2\\igor\\atividades do curso\\projetohotsite\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

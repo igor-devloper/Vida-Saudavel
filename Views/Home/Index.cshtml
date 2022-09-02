@@ -1,8 +1,10 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Http;
+@{
     ViewData["Title"] = "Home Page";
 }
-<div class="row">
-    <div class="banner-left col-6">
+
+<div class="row mt-5">
+    <div class="col-6">
         <div class="banner-title">
             <h1>Projeto Iniciativa <strong>Vida saudavel</strong></h1>
             <div class="banner-title-text">
@@ -21,38 +23,164 @@
                     de
                     hábitos saudáveis ou, para quem está longe de andar na linha, a mudança do estilo de vida.</p>
             </div>
-            <div class="formulario-left">
-                <div class="form-full">
-                    <strong class="title">Fique em contato</strong>
-                    <form class="form" asp-action="" method="POST">
-                        <input required placeholder="Digite seu nome" name="nome" />
-                        <input type="email" name="email" required placeholder="Digite seu email" />
-                        <input type="text" name="mensagem" placeholder="Mensagem(opcional)" />
-                        <button type="submit">
-                            Enviar
-                        </button>
-                    </form>
+        </div>
+    </div>
+    <div class="image-wapper col-6">
+        <img src="../image/imageHome.png" alt="" style=width: 500px; height: 300px;>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="form-contato col-4">
+        <title class="title">Fique em contato</title>
+        <p>Bem vindo <strong>@Context.Session.GetString("Login")</strong>, nos mande mensagem e fique por dentro</p>
+        <form class="form" asp-action="CadastrarInteresse" method="POST">
+            <input required placeholder="Digite seu nome" name="nome" />
+            <input type="email" name="email" required placeholder="Digite seu email" />
+            <input type="text" name="mensagem" placeholder="Mensagem(opcional)" />
+            <button type="submit">
+                Enviar
+            </button>
+        </form>
+    </div>
+    <div class="social-media col-7">
+        <a href="#" class="text-center p-4" data-toggle="modal" data-target="#idAgenda">
+            <i class="ph-calendar-light"></i>
+            <p>Agenda de eventos</p>
+        </a>
+        <a href="#" class="text-center p-4" data-toggle="modal" data-target="#idVidaSaudavel">
+            <i class="ph-magic-wand-light"></i>
+            <p>Dicas de vida saudavel</p>
+        </a>
+        <a href="#" class="text-center p-4" data-toggle="modal" data-target="#idApoidores">
+            <i class="ph-smiley-wink-light"></i>
+            <p>Apoiadores</p>
+        </a>
+    </div>
+</div>
+<div class="modal fade" id="idAgenda" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bg-dark text-white p-3">
+            <div class="title-modal">
+                <h4 class="text-center mt-3">Agenda de eventos</h4>
+            </div>
+            <div class="modal-body">
+                <div class="empresa">
+                    <img src="../image/evento-1.png" alt="">
+                </div>
+                <div class="nome-description">
+                    <a href="https://iess.org.br/evento/x-congresso-juridico-de-saude-suplementar" target="_blank">X Congresso Jurídico de Saúde Suplementar</a>
+                    <p>Pela primeira vez, o Congresso Jurídico de Saúde Suplementar poderá ser acompanhado ao vivo. A
+                        décima edição do evento, que acontece anualmente, será transmitida para o público externo de
+                        forma gratuita pelo Youtube e site do IESS.</p>
+                </div>
+                <div class="empresa">
+                    <img src="../image/evento-2.png" alt="">
+                </div>
+                <div class="nome-description">
+                    <a href="https://iess.org.br/evento/webinar-iess-esg-na-saude-governanca-corporativa" target="_blank">Webinar IESS - ESG na Saúde | Governança Corporativa</a>
+                    <p>O movimento ESG vem ganhando cada vez mais espaço no mundo. A sigla faz referência a compromissos
+                        e boas práticas Ambiental, Social e de Governança Corporativa nas empresas. Demandas importantes
+                        que se aplicam a todos os setores, inclusive na Saúde.
+                    <p>
+                </div>
+                <div class="empresa">
+                    <i class="ph-calendar-light"></i>
+                </div>
+                <div class="nome-description">
+                    <a href="https://iess.org.br/evento/xi-premio-iess" target="_blank">XI Prêmio IESS</a>
+                    <p>O movimento ESG vem ganhando cada vez mais espaço no mundo. A sigla faz referência a compromissos
+                        e boas práticas Ambiental, Social e de Governança Corporativa nas empresas. Demandas importantes
+                        que se aplicam a todos os setores, inclusive na Saúde.
+                    <p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="banner-right col-6">
-        <div class="image-wapper">
-            <img src="" alt="">
+</div>
+<div class="modal fade" id="idApoidores" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bg-dark text-white p-3 flex">
+            <div class="title-modal">
+                <h4 class="text-center mt-3">Apoiadores</h4>
+            </div>
+            <div class="modal-body">
+                <div class="card-empresa">
+                    <div class="empresa">
+                        <a href="https://br.linkedin.com/"><i class="ph-linkedin-logo-light"></i></a>
+                    </div>
+                    <div class="nome-description">
+                        <h1>Linkedin</h1>
+                        <p>LinkedIn é uma rede social de negócios fundada em dezembro de 2002 e lançada em 5 de maio de
+                            2003.</p>
+                    </div>
+                </div>
+                <div class="card-empresa">
+                    <div class="empresa">
+                        <a href="https://www.instagram.com/"><i class="ph-instagram-logo-light"></i></a>
+                    </div>
+                    <div class="nome-description">
+                        <h1>Instagram</h1>
+                        <p>
+                            O Instagram é uma rede social online de compartilhamento de fotos e vídeos entre seus
+                            usuários, que permite aplicar filtros digitais e compartilhá-los em uma variedade de
+                            serviços de redes sociais.</p>
+                    </div>
+                </div>
+                <div class="card-empresa">
+                    <div class="empresa">
+                        <a href="https://discord.com/"><i class="ph-discord-logo-light"></i></a>
+                    </div>
+                    <div class="nome-description">
+                        <h1>Discord</h1>
+                        <p>
+                            Discord é um aplicativo de voz sobre IP proprietário e gratuito, projetado inicialmente para
+                            comunidades de jogos.</p>
+                    </div>
+                </div>
+                <div class="card-empresa">
+                    <div class="empresa">
+                        <a href="https://twitter.com/"><i class="ph-twitter-logo-light"></i></a>
+                    </div>
+                    <div class="nome-description">
+                        <h1>Twitter</h1>
+                        <p>
+                            Twitter é uma rede social e um serviço de microblog, que permite aos usuários enviar e
+                            receber atualizações pessoais de outros contatos.</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="social-media row">
-            <a href="https://www.linkedin.com/in/igor-wagner-66b22222a/" class="text-center">
-                <i class="fab fa-linkedin"></i>
-                <p >Agenda de eventos</p>
-            </a>
-            <a href="https://github.com/igor-devloper" class="text-center">
-                <i class="fab fa-github-alt"></i>
-                <p >Dicas de vida saudavel</p>
-            </a>
-            <a href="https://twitter.com/igorumgnomio" class="text-center">
-                <i class="fab fa-twitter"></i>
-                <p >Apoiadores</p>
-            </a>
+    </div>
+</div>
+<div class="modal fade" id="idVidaSaudavel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bg-dark text-white p-3">
+            <div class="title-modal">
+                <h4 class="text-center mt-3">Dicas de visa saudavel</h4>
+            </div>
+            <div class="modal-body">
+                <div class="milgrau">
+                    <p>1. Dormir bem
+                        Assim como se alimentar e praticar exercícios são essenciais para uma vida saudável, dormir não
+                        é diferente.
+                    </p>
+                    <p> 2. Beber água
+                        Aproximadamente dois terços do nosso corpo são compostos por água. Ela transporta os nutrientes,
+                        o oxigênio e auxilia na produção de energia.
+                    </p>
+                    <p>
+                        3. Praticar exercícios físicos
+                        A atividade física regular não ajuda somente a manter corpo saudável e bonito esteticamente, mas
+                        é fundamental na prevenção de várias patologias.
+                    </p>
+                    <p> 4. Dedicar tempo para fazer o que gosta
+                        Fazer amigos, sair, rir, namorar, são coisas que fazem bem.</p>
+                    <p>
+                        5. Ter uma dieta equilibrada
+                        Grande parte dos nossos problemas de saúde estão diretamente ligados à nossa má alimentação.</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
