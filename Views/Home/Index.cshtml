@@ -6,6 +6,10 @@
 <div class="row mt-5">
     <div class="col-6">
         <div class="banner-title">
+            <a href="/Usuario/Sair" class="btn btn-lg btn-logout flex bg-dark" role="button">
+                <span id="nomeApresentacao">@Context.Session.GetString("Login")</span>
+                <i class="ph-sign-out-light"></i>
+            </a>
             <h1>Projeto Iniciativa <strong>Vida saudavel</strong></h1>
             <div class="banner-title-text">
                 <p>"SOMOS RESPONSÁVEIS PELO QUE FAZEMOS, MAS TAMBÉM SOMOS RESPONSÁVEIS POR AQUILO QUE DEIXAMOS DE
@@ -33,11 +37,11 @@
     <div class="form-contato col-4">
         <title class="title">Fique em contato</title>
         <p>Bem vindo <strong>@Context.Session.GetString("Login")</strong>, nos mande mensagem e fique por dentro</p>
-        <form class="form" asp-action="CadastrarInteresse" method="POST">
-            <input required placeholder="Digite seu nome" name="nome" />
-            <input type="email" name="email" required placeholder="Digite seu email" />
-            <input type="text" name="mensagem" placeholder="Mensagem(opcional)" />
-            <button type="submit">
+        <form class="form" id="formCadastro" method="POST">
+            <input required placeholder="Digite seu nome" name="nome" id="nome"/>
+            <input type="email" name="email" required placeholder="Digite seu email" id="email"/>
+            <input type="text" name="mensagem" placeholder="Mensagem(opcional)" id="mensagem"/>
+            <button type="submit" id="botao">
                 Enviar
             </button>
         </form>
@@ -68,7 +72,8 @@
                     <img src="../image/evento-1.png" alt="">
                 </div>
                 <div class="nome-description">
-                    <a href="https://iess.org.br/evento/x-congresso-juridico-de-saude-suplementar" target="_blank">X Congresso Jurídico de Saúde Suplementar</a>
+                    <a href="https://iess.org.br/evento/x-congresso-juridico-de-saude-suplementar" target="_blank">X
+                        Congresso Jurídico de Saúde Suplementar</a>
                     <p>Pela primeira vez, o Congresso Jurídico de Saúde Suplementar poderá ser acompanhado ao vivo. A
                         décima edição do evento, que acontece anualmente, será transmitida para o público externo de
                         forma gratuita pelo Youtube e site do IESS.</p>
@@ -77,7 +82,8 @@
                     <img src="../image/evento-2.png" alt="">
                 </div>
                 <div class="nome-description">
-                    <a href="https://iess.org.br/evento/webinar-iess-esg-na-saude-governanca-corporativa" target="_blank">Webinar IESS - ESG na Saúde | Governança Corporativa</a>
+                    <a href="https://iess.org.br/evento/webinar-iess-esg-na-saude-governanca-corporativa"
+                        target="_blank">Webinar IESS - ESG na Saúde | Governança Corporativa</a>
                     <p>O movimento ESG vem ganhando cada vez mais espaço no mundo. A sigla faz referência a compromissos
                         e boas práticas Ambiental, Social e de Governança Corporativa nas empresas. Demandas importantes
                         que se aplicam a todos os setores, inclusive na Saúde.

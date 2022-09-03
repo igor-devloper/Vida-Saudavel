@@ -10,9 +10,8 @@
 body{
   background-color: #09090A !important;
   background-image: url("../image/blur.png");
-  
+  height: 100vh;
 }
-
 .container{
   min-height: 100vh;
   background-size: cover;
@@ -210,6 +209,25 @@ footer{
   color: #C4C4CC;
   margin-top: 2rem;
 }
+.banner-title a{
+  display: inline-flex;
+  padding: 1rem;
+  color: #E1E1E6;
+  margin-bottom: 1rem;
+  float: left;
+  gap: .5rem;
+  margin-left: -3rem;
+}
+.banner-title span{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+  justify-content: center;
+}
+
 .banner-right{
   width: 40%;
   display: flex;

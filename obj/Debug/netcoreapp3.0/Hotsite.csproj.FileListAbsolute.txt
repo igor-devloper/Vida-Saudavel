@@ -62,3 +62,8 @@ C:\Users\igor2\igor\atividades do curso\projetohotsite\obj\Debug\netcoreapp3.0\H
 C:\Users\igor2\igor\atividades do curso\projetohotsite\obj\Debug\netcoreapp3.0\Hotsite.genruntimeconfig.cache
 C:\Users\igor2\igor\atividades do curso\projetohotsite\obj\Debug\netcoreapp3.0\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\igor2\igor\atividades do curso\projetohotsite\obj\Debug\netcoreapp3.0\Razor\Views\Usuario\Cadastro.cshtml.g.cs
+C:\Users\igor2\igor\atividades do curso\projetohotsite\bin\Debug\netcoreapp3.0\publish\web.config
+C:\Users\igor2\igor\atividades do curso\projetohotsite\bin\Debug\netcoreapp3.0\publish\appsettings.Development.json
+C:\Users\igor2\igor\atividades do curso\projetohotsite\bin\Debug\netcoreapp3.0\publish\appsettings.json
+C:\Users\igor2\igor\atividades do curso\projetohotsite\bin\Debug\netcoreapp3.0\publish\Hotsite.deps.json
+C:\Users\igor2\igor\atividades do curso\projetohotsite\bin\Debug\netcoreapp3.0\publish\Hotsite.runtimeconfig.json
